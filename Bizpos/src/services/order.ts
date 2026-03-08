@@ -87,9 +87,7 @@ export async function getOrders(
   }
 
   if (status) {
-    if (status === "ALL") {
-      query.whereIn("orders.status", ["COMPLETED", "EXCHANGED"]);
-    } else {
+    if (status !== "ALL") {
       query.andWhere("orders.status", status);
     }
   }

@@ -5,6 +5,10 @@ const nextConfig: NextConfig = {
     domains: ["localhost"],
     remotePatterns: [
       {
+        protocol: "http",
+        hostname: "**",
+      },
+      {
         protocol: "https",
         hostname: "**",
       },

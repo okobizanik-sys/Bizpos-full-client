@@ -77,11 +77,33 @@ export const columns: ColumnDef<Orders>[] = [
     header: "Status",
     accessorKey: "status",
     cell: ({ row }) => {
-      return row.original.status === "COMPLETED" ? (
-        <Badge className="bg-[#65CA00]">Completed</Badge>
-      ) : (
-        <Badge className="bg-[#00AAFF]">Exchanged</Badge>
-      );
+      const status = String(row.original.status || "").toUpperCase();
+
+      if (status === "PENDING") {
+        return <Badge className="bg-[#F59E0B]">Pending</Badge>;
+      }
+
+      if (status === "ON_THE_WAY") {
+        return <Badge className="bg-[#3B82F6]">On The Way</Badge>;
+      }
+
+      if (status === "DELIVERY") {
+        return <Badge className="bg-[#06B6D4]">Delivery</Badge>;
+      }
+
+      if (status === "COMPLETED") {
+        return <Badge className="bg-[#65CA00]">Complete</Badge>;
+      }
+
+      if (status === "EXCHANGED") {
+        return <Badge className="bg-[#8B5CF6]">Exchanged</Badge>;
+      }
+
+      if (status === "RETURN") {
+        return <Badge className="bg-[#EF4444]">Return</Badge>;
+      }
+
+      return <Badge>{row.original.status || "Unknown"}</Badge>;
     },
   },
   {

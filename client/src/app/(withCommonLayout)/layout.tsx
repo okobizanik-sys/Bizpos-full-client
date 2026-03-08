@@ -4,6 +4,7 @@ import NavBar from "@/components/pages/header/NavBar/NavBar";
 import Footer from "@/components/pages/landing_pages/Footer/Footer";
 import { getUser } from "@/services/auth";
 import { getCartProducts } from "@/services/cart";
+import { getBizposLogoUrl } from "@/services/settings";
 import MessengerBtn from "@/shared/MessengerBtn/MessengerBtn";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -17,6 +18,7 @@ export default async function Layout({
   const user = await getUser();
   const userId = user?.id;
   const coupon = "";
+  const logoUrl = await getBizposLogoUrl();
   const products = await getCartProducts(userId, coupon).catch(() => ({
     status: "error",
     data: {
@@ -45,7 +47,11 @@ export default async function Layout({
       />
 
       <MessengerBtn />
-      <NavBar userCartProducts={products?.data} userId={user?.id} />
+      <NavBar
+        userCartProducts={products?.data}
+        userId={user?.id}
+        logoUrl={logoUrl}
+      />
       {children}
       <Footer userCartProducts={products?.data} userId={user?.id} />
 

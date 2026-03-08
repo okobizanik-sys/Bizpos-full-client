@@ -94,9 +94,10 @@ export const FilterOrderForm: React.FC<FilterOrderFormProps> = ({
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="ALL">All</SelectItem>
-                      <SelectItem value="COMPLETED">Completed</SelectItem>
-                      <SelectItem value="EXCHANGED">Exchanged</SelectItem>
-                      {/* <SelectItem value="RETURN">Returned</SelectItem> */}
+                      <SelectItem value="PENDING">Pending</SelectItem>
+                      <SelectItem value="ON_THE_WAY">On The Way</SelectItem>
+                      <SelectItem value="DELIVERY">Delivery</SelectItem>
+                      <SelectItem value="COMPLETED">Complete</SelectItem>
                     </SelectContent>
                   </Select>
                 )}

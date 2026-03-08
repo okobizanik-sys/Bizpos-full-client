@@ -30,10 +30,14 @@ interface NavBarProps {
     cartDetails: any[]; // Replace 'any' with the specific type if known
   };
   userId?: string;
+  logoUrl?: string;
 }
 
-const NavBar: React.FC<NavBarProps> = ({ userCartProducts, userId }) => {
-
+const NavBar: React.FC<NavBarProps> = ({
+  userCartProducts,
+  userId,
+  logoUrl,
+}) => {
   // const { shouldRefresh, doneRefresh } = useCartRefresh();
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [showSearch, setShowSearch] = useState(false);
@@ -91,6 +95,7 @@ const NavBar: React.FC<NavBarProps> = ({ userCartProducts, userId }) => {
 
   // const userId = usersId?.id;
   const posUrl = getBizposPosUrl(userId || usersId?.id);
+  const resolvedLogo = logoUrl || logo;
   // const coupon = "";
   // useEffect(() => {
   //   const userProducts = async () => {
@@ -116,10 +121,11 @@ const NavBar: React.FC<NavBarProps> = ({ userCartProducts, userId }) => {
   return (
     <>
       <div
-        className={`hidden lg:block w-full py-4 z-40 shadow bg-white transition-all duration-300 ${isScrolled
+        className={`hidden lg:block w-full py-4 z-40 shadow bg-white transition-all duration-300 ${
+          isScrolled
             ? "opacity-0 -translate-y-full fixed"
             : "opacity-100 translate-y-0 relative"
-          }`}
+        }`}
       >
         <div className="Container">
           <div className="flex items-center justify-between relative">
@@ -135,14 +141,14 @@ const NavBar: React.FC<NavBarProps> = ({ userCartProducts, userId }) => {
                     <RiMenuAddFill className="text-2xl" />
                   )}
                 </div>
-                <div className="w-[180px] lg:w-[160px] 2xl:w-[180px]">
-                  <Link href="/">
+                <div className="w-[180px] lg:w-[160px] 2xl:w-[180px] h-[44px]">
+                  <Link href="/" className="block w-full h-full">
                     <Image
-                      src={logo || null}
+                      src={resolvedLogo}
                       alt="Unicrescent | Best E-commerce platform in BD"
                       width={180}
                       height={80}
-                      className="w-full h-full"
+                      className="w-full h-full object-contain"
                     />
                   </Link>
                 </div>
@@ -151,7 +157,7 @@ const NavBar: React.FC<NavBarProps> = ({ userCartProducts, userId }) => {
 
             <div className="flex items-center  2xl:gap-16   gap-2 xl:relative">
               <div className="">
-                <SearchForm onClose={() => { }} />
+                <SearchForm onClose={() => {}} />
               </div>
               <div className="lg:flex hidden items-center justify-center xl:gap-4 gap-2 ml-8">
                 {menuList?.map((menu, index) => (
@@ -224,8 +230,9 @@ const NavBar: React.FC<NavBarProps> = ({ userCartProducts, userId }) => {
             <div className="flex space-x-3 lg:gap-0 gap-2">
               <div
                 onClick={() => setShowSideMenu(!showSideMenu)}
-                className={`pr-3 border-r border-gray-300 cursor-pointer ${isShopPage ? "lg:hidden" : "lg:block"
-                  }`}
+                className={`pr-3 border-r border-gray-300 cursor-pointer ${
+                  isShopPage ? "lg:hidden" : "lg:block"
+                }`}
               >
                 {showSideMenu ? (
                   <RiCloseFill className="text-2xl" />
@@ -234,12 +241,14 @@ const NavBar: React.FC<NavBarProps> = ({ userCartProducts, userId }) => {
                 )}
               </div>
 
-              <div className="md:w-[180px] w-[140px] pl-3">
-                <Link href="/">
+              <div className="md:w-[180px] w-[140px] h-[36px] pl-3">
+                <Link href="/" className="block w-full h-full">
                   <Image
-                    src={logo || null}
+                    src={resolvedLogo}
                     alt="Unicrescent | Best E-commerce platform in BD"
-                    className="w-full h-full"
+                    width={180}
+                    height={80}
+                    className="w-full h-full object-contain"
                   />
                 </Link>
               </div>
