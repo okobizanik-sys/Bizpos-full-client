@@ -2,18 +2,18 @@
 
 import { useRouter, useSearchParams } from "next/navigation";
 import { HiMiniXMark } from "react-icons/hi2";
+import { normalizeCategorySlugs, serializeCategorySlugs } from "@/lib/utils";
 
 const SearchCancel = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
 
-  const categorySlugs = searchParams.getAll("category");
-  const allCategories = categorySlugs.flatMap((cat) => cat.split(","));
+  const allCategories = normalizeCategorySlugs(searchParams.getAll("category"));
 
   const handleClear = (value: string) => {
     const newParams = new URLSearchParams(searchParams.toString());
     const currentValues = new Set(
-      (searchParams.get("category")?.split(",") || []).filter(Boolean)
+      normalizeCategorySlugs(searchParams.getAll("category"))
     );
 
     if (currentValues.has(value)) {
@@ -23,7 +23,7 @@ const SearchCancel = () => {
     }
 
     if (currentValues.size > 0) {
-      newParams.set("category", Array.from(currentValues).join(","));
+      newParams.set("category", serializeCategorySlugs(Array.from(currentValues)));
     } else {
       newParams.delete("category");
     }

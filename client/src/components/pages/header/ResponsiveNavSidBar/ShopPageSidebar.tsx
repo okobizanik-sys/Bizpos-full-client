@@ -1,6 +1,7 @@
 "use client";
 
 import { TShopSideBar } from "@/types";
+import { normalizeCategorySlugs, serializeCategorySlugs } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
@@ -14,14 +15,13 @@ const ShopPageSidebar: React.FC<ShopPageSidebarProps> = ({ shopSideBar }) => {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
 
   useEffect(() => {
-    const cats = searchParams.get("category")?.split(",") || [];
-    setSelectedCategories(cats);
+    setSelectedCategories(normalizeCategorySlugs(searchParams.getAll("category")));
   }, [searchParams]);
 
   const updateParams = (value: string) => {
     const newParams = new URLSearchParams(searchParams.toString());
     const currentValues = new Set(
-      (searchParams.get("category")?.split(",") || []).filter(Boolean)
+      normalizeCategorySlugs(searchParams.getAll("category"))
     );
 
     if (currentValues.has(value)) {
@@ -31,7 +31,7 @@ const ShopPageSidebar: React.FC<ShopPageSidebarProps> = ({ shopSideBar }) => {
     }
 
     if (currentValues.size > 0) {
-      newParams.set("category", Array.from(currentValues).join(","));
+      newParams.set("category", serializeCategorySlugs(Array.from(currentValues)));
     } else {
       newParams.delete("category");
     }

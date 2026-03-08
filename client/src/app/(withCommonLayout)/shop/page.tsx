@@ -2,14 +2,9 @@ import ShopProducts from "@/components/pages/products/ShopProducts/ShopProducts"
 import ShopProductsCategories from "@/components/pages/products/ShopProductsCategories/ShopProductsCategories";
 import { getShopSidebar } from "@/services/shopSidebar";
 import { getAllProductsForShop } from "@/services/products";
-import { getUser } from "@/services/auth";
-import { getCartProducts } from "@/services/cart";
-// import NavBar from "@/components/pages/header/NavBar/NavBar";
-import CartSideBar from "@/components/pages/cartSideBar/CartSideBar";
 import React from "react";
-import UpcomingSideBanner from "@/components/pages/UpcomingSideBanner/UpcomingSideBanner";
-import { getAllBanners } from "@/services/banners";
 import { Metadata } from "next";
+import { normalizeCategorySlugs, serializeCategorySlugs } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Unicrescent | All Product",
@@ -26,18 +21,12 @@ export default async function ShopPage({
   const params = await searchParams;
   const { data: shopSideBar } = await getShopSidebar();
 
-  const categorySlug = Array.isArray(params.category)
-    ? params.category[0]
-    : params.category || "";
+  const categorySlug = serializeCategorySlugs(
+    normalizeCategorySlugs(params.category as string | string[] | undefined)
+  );
 
   const { data: products } = await getAllProductsForShop(categorySlug);
 
-  const user = await getUser();
-  const userId = user?.id;
-  const coupon = "";
-  const cartProducts = await getCartProducts(userId, coupon);
-
-  const { data: banners } = await getAllBanners();
   const safeProducts = products || {
     result: [],
     pagination: {
@@ -52,7 +41,6 @@ export default async function ShopPage({
 
   return (
     <>
-      {/* <NavBar userCartProducts={cartProducts?.data} /> */}
       <div className="flex min-h-screen Container">
         <div className="w-[20%] hidden lg:block">
           <ShopProductsCategories shopSideBar={shopSideBar || []} />
@@ -64,8 +52,6 @@ export default async function ShopPage({
             categorySlug={categorySlug}
           />
         </div>
-        <CartSideBar cartProducts={cartProducts?.data} />
-        <UpcomingSideBanner banners={banners || []} />
       </div>
     </>
   );

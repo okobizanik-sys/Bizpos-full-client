@@ -7,7 +7,6 @@ import SearchForm from "../SearchForm/SearchForm";
 import { menuList } from "@/utilits/menuList";
 import Link from "next/link";
 import { BsCart2 } from "react-icons/bs";
-import { FiUser } from "react-icons/fi";
 import { RiCloseFill, RiMenuAddFill } from "react-icons/ri";
 import { IoSearchOutline } from "react-icons/io5";
 import DropDownMenu from "../DropDownMenu/DropDownMenu";
@@ -20,7 +19,6 @@ import { getShopSidebar } from "@/services/shopSidebar";
 // import { getCartProducts } from "@/services/cart";
 import { getUser, setCorrelation } from "@/services/auth";
 
-import UserPopover from "@/shared/UserPopover/UserPopover";
 import { TUser } from "@/types";
 import { usePathname } from "next/navigation";
 import { getBizposPosUrl } from "@/config/config";
@@ -92,7 +90,6 @@ const NavBar: React.FC<NavBarProps> = ({ userCartProducts, userId }) => {
   }, []);
 
   // const userId = usersId?.id;
-  const userName = usersId?.name;
   const posUrl = getBizposPosUrl(userId || usersId?.id);
   // const coupon = "";
   // useEffect(() => {
@@ -214,21 +211,6 @@ const NavBar: React.FC<NavBarProps> = ({ userCartProducts, userId }) => {
                   </p>
                 </div>
               </Link>
-
-              <div>
-                {userName ? (
-                  <div className="p-1 border rounded">
-                    <UserPopover />
-                  </div>
-                ) : (
-                  // Show login link if userId is not present
-                  <Link href="/login">
-                    <div className="px-2 py-2 border rounded">
-                      <FiUser />
-                    </div>
-                  </Link>
-                )}
-              </div>
             </div>
           </div>
         </div>
@@ -280,20 +262,6 @@ const NavBar: React.FC<NavBarProps> = ({ userCartProducts, userId }) => {
                     </p>
                   </div>
                 </Link>
-                <div>
-                  {userName ? (
-                    <div className="p-1 border rounded">
-                      <UserPopover />
-                    </div>
-                  ) : (
-                    // Show login link if userId is not present
-                    <Link href="/login">
-                      <div className="px-2 py-2 border rounded">
-                        <FiUser />
-                      </div>
-                    </Link>
-                  )}
-                </div>
               </div>
             </div>
           </div>

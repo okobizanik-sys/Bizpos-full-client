@@ -2,6 +2,7 @@
 
 import { apiBaseUrl } from "@/config/config";
 import { apiRequest } from "@/lib/apiRequest";
+import { normalizeCategorySlugs } from "@/lib/utils";
 import { TResponse } from "@/types";
 
 export const getHomePageSubCategoryProducts = async (viewType?: string) => {
@@ -18,7 +19,7 @@ export const getAllProductsForShop = async (
   const searchParams = new URLSearchParams();
 
   if (categorySlug) {
-    const categories = categorySlug.split(",");
+    const categories = normalizeCategorySlugs(categorySlug);
     categories.forEach((cat) => {
       searchParams.append("categorySlug", cat);
     });
