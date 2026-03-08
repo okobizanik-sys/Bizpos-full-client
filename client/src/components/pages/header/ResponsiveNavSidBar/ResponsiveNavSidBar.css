@@ -1,0 +1,12 @@
+/* .category-title{
+    position: relative;
+}
+.category-title::before{
+    position: absolute;
+    content: "";
+    left: 40px;
+    bottom: 12px;
+    width:40px;
+    height:2px;
+    background-color: #231E1F;
+} */

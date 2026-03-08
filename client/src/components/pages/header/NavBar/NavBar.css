@@ -1,0 +1,43 @@
+/* .menuTitle{
+    position: relative;
+}
+.menuTitle::before{
+    position: absolute;
+    content:"";
+    width:0%;
+    height: 2px;
+    left:0;
+    bottom:12px;
+    background-color: #1F4095;
+    transition: 0.5s;
+}
+.menuTitle:hover::before{
+    width: 100%;
+} */
+
+
+.menuTitle {
+    position: relative;
+}
+
+.menuTitle::before {
+    position: absolute;
+    content: "";
+    width: 80%;
+    height: 2px;
+    left: 0;
+    bottom: 0px;
+    background-color: #1F4095;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+}
+
+.menuTitle:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.menuTitle:not(:hover)::before {
+    transform-origin: right;
+}

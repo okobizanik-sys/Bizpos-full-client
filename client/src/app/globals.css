@@ -1,0 +1,209 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@layer base {
+  .Container {
+    @apply 2xl:px-28 xl:px-20 lg:px-10 md:px-10 px-4;
+  }
+
+  .text-primary {
+    @apply text-[#1C3E92]
+  }
+
+  .bg-primary {
+    @apply bg-[#1C3E92]
+  }
+
+  .text-secondary {
+    @apply text-[#5772B3]
+  }
+
+  .bg-secondary {
+    @apply bg-[#5772B3]
+  }
+
+  .button-primary {
+    @apply bg-[#1D4092] text-white font-bold py-1.5 rounded-md cursor-pointer;
+  }
+  .button-primary:hover {
+    @apply bg-blue-800;
+  }
+
+  .policy-page-text {
+    @apply mt-2 text-lg leading-7 text-[#262626]/80;
+  }
+
+  .policy-page-li {
+    @apply list-disc ml-6;
+  }
+}
+
+/* Use a class like .custom-scroll */
+.custom-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background-color: #213F98;
+  border-radius: 4px;
+  max-height: 50px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: #7C98BE;
+  border-radius: 4px;
+}
+
+.image-container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Optional: Add some hover effects */
+.react-image-magnify-image:hover {
+  cursor: crosshair;
+}
+
+
+.spinner {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+}
+
+.spinner div {
+  position: absolute;
+  width: 50%;
+  height: 150%;
+  background: #000000;
+  transform: rotate(calc(var(--rotation) * 1deg)) translate(0, calc(var(--translation) * 1%));
+  animation: spinner-fzua35 1s calc(var(--delay) * 1s) infinite ease;
+}
+
+.spinner div:nth-child(1) {
+  --delay: 0.1;
+  --rotation: 36;
+  --translation: 150;
+}
+
+.spinner div:nth-child(2) {
+  --delay: 0.2;
+  --rotation: 72;
+  --translation: 150;
+}
+
+.spinner div:nth-child(3) {
+  --delay: 0.3;
+  --rotation: 108;
+  --translation: 150;
+}
+
+.spinner div:nth-child(4) {
+  --delay: 0.4;
+  --rotation: 144;
+  --translation: 150;
+}
+
+.spinner div:nth-child(5) {
+  --delay: 0.5;
+  --rotation: 180;
+  --translation: 150;
+}
+
+.spinner div:nth-child(6) {
+  --delay: 0.6;
+  --rotation: 216;
+  --translation: 150;
+}
+
+.spinner div:nth-child(7) {
+  --delay: 0.7;
+  --rotation: 252;
+  --translation: 150;
+}
+
+.spinner div:nth-child(8) {
+  --delay: 0.8;
+  --rotation: 288;
+  --translation: 150;
+}
+
+.spinner div:nth-child(9) {
+  --delay: 0.9;
+  --rotation: 324;
+  --translation: 150;
+}
+
+.spinner div:nth-child(10) {
+  --delay: 1;
+  --rotation: 360;
+  --translation: 150;
+}
+
+@keyframes spinner-fzua35 {
+  0%, 10%, 20%, 30%, 50%, 60%, 70%, 80%, 90%, 100% {
+    transform: rotate(calc(var(--rotation) * 1deg)) translate(0, calc(var(--translation) * 1%));
+  }
+
+  50% {
+    transform: rotate(calc(var(--rotation) * 1deg)) translate(0, calc(var(--translation) * 1.5%));
+  }
+}
+
+/* order */
+.truck-container {
+  position: fixed;
+  bottom: 40px;
+  left: -200px;
+  z-index: 50;
+  width: 200px;
+  height: 100px;
+  animation: drive 3s forwards ease-in-out;
+  background: #000;
+}
+
+.truck {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  background: #1d4092;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.truck::before {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border-radius: 50%;
+  bottom: -10px;
+  left: 20px;
+  box-shadow: 100px 0 #fff;
+}
+
+.truck-window {
+  position: absolute;
+  background: #cce6ff;
+  width: 60px;
+  height: 40px;
+  top: 20px;
+  right: 20px;
+  border-radius: 5px;
+}
+
+@keyframes drive {
+  0% {
+    left: -200px;
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(-2deg);
+  }
+  100% {
+    left: 100vw;
+    transform: scale(1) rotate(0deg);
+  }
+}
+

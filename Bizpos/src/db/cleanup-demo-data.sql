@@ -1,0 +1,21 @@
+SET FOREIGN_KEY_CHECKS = 0;
+
+TRUNCATE TABLE order_items;
+TRUNCATE TABLE orders;
+TRUNCATE TABLE customers;
+TRUNCATE TABLE challan_items;
+TRUNCATE TABLE challans;
+TRUNCATE TABLE stock_histories;
+TRUNCATE TABLE stocks;
+TRUNCATE TABLE products_sizes;
+TRUNCATE TABLE products_colors;
+TRUNCATE TABLE products;
+TRUNCATE TABLE images;
+TRUNCATE TABLE sizes;
+TRUNCATE TABLE colors;
+TRUNCATE TABLE brands;
+TRUNCATE TABLE categories;
+TRUNCATE TABLE order_serials;
+TRUNCATE TABLE barcode_serials;
+
+SET FOREIGN_KEY_CHECKS = 1;

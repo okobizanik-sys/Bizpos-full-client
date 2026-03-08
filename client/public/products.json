@@ -1,0 +1,309 @@
+[
+    {
+      "_id": "1",
+      "title": "Wireless Headphones",
+      "image": "https://i.ibb.co.com/1f97SpDY/67c4f8805a51e-square.jpg",
+      "price": 124,
+      "salePrice": 120,
+      "subCategory": "Designer Polo"
+    },
+    {
+      "_id": "2",
+      "title": "Smart Watch",
+      "image": "https://i.ibb.co.com/Zz0WNCHD/64766af00d2f0-square.jpg",
+      "price": 5427,
+      "salePrice": 5400,
+      "details":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like",
+      "subCategory": "Designer Polo"
+    },
+    {
+      "_id": "3",
+      "title": "Gaming Mouse",
+      "image": "https://i.ibb.co.com/q3mwFrK4/648457b7029a6-square.jpg",
+      "price": 1204,
+      "salePrice": 1200,
+      "subCategory": "Designer Polo"
+    },
+    {
+      "_id": "4",
+      "title": "Bluetooth Speaker",
+      "image": "https://i.ibb.co.com/9mN0JFxH/64766acbd8d84-square.jpg",
+      "price": 2410.00,
+      "salePrice": 2410.00,
+      "subCategory": "Designer Polo"
+    },
+    {
+      "_id": "5",
+      "title": "Running Shoes",
+      "image": "https://i.ibb.co.com/4RdJzMDd/62178453aa564-square.jpg",
+      "price": 1290,
+      "salePrice": 1209,
+      "subCategory": "Designer Polo"
+    },
+    {
+      "_id": "6",
+      "title": "Laptop Backpack",
+      "image": "https://i.ibb.co.com/sdfXLJvw/65c5dcf0aa30b-square.jpg",
+      "price": 189,
+      "salePrice": 169,
+      "subCategory": "Designer Polo"
+    },
+    {
+      "_id": "7",
+      "title": "Mechanical Keyboard",
+      "image": "https://i.ibb.co.com/Nkh2MtV/66e2e8eece105-square.jpg",
+      "price": 119,
+      "salePrice": 120,
+      "subCategory": "Designer Polo"
+    },
+    {
+      "_id": "8",
+      "title": "Portable Charger",
+      "image": "https://i.ibb.co.com/rG8vnV0h/67285487491ac-square.jpg",
+      "price": 390,
+      "salePrice": 290,
+      "subCategory": "Designer Polo"
+    },
+    {
+      "_id": "9",
+      "title": "Digital Camera",
+      "image": "https://i.ibb.co.com/S71dz1fc/65c4df8442aa5-square.jpg",
+      "price": 4990,
+      "salePrice": 4400,
+      "subCategory": "Designer Polo"
+    },
+    {
+      "_id": "10",
+      "title": "Smartphone Stand",
+      "image": "https://example.com/images/smartphone-stand.jpg",
+      "price": 1920,
+      "salePrice": 1420,
+      "subCategory": "Designer Polo22222"
+    },
+    {
+      "_id": "11",
+      "title": "Wireless Headphones",
+      "image": "https://i.ibb.co.com/yBy79jGS/67dc35b5a0fc5-square.png",
+      "price": 124,
+      "salePrice": 120,
+      "subCategory": "Kurti"
+    },
+    {
+      "_id": "12",
+      "title": "Smart Watch",
+      "image": "https://i.ibb.co.com/mrRP2y9H/67d6a184bc537-square.jpg",
+      "price": 5427,
+      "salePrice": 5400,
+      "subCategory": "Kurti"
+    },
+    {
+      "_id": "13",
+      "title": "Gaming Mouse",
+      "image": "https://i.ibb.co.com/0pFqP8cF/67d7f7914409b-square.jpg",
+      "price": 1204,
+      "salePrice": 1200,
+      "subCategory": "Kurti"
+    },
+    {
+      "_id": "14",
+      "title": "Bluetooth Speaker",
+      "image": "https://i.ibb.co.com/5XYM7spv/67c8376b2e625-square.jpg",
+      "price": 2410.00,
+      "salePrice": 2410.00,
+      "subCategory": "Kurti"
+    },
+    {
+      "_id": "15",
+      "title": "Running Shoes",
+      "image": "https://i.ibb.co.com/673Rr6f4/67b31fa9a2b2d-square-1.jpg",
+      "price": 1290,
+      "salePrice": 1209,
+      "subCategory": "Kurti"
+    },
+    {
+      "_id": "16",
+      "title": "Laptop Backpack",
+      "image": "https://i.ibb.co.com/HpxXVMXD/67921810e9620-square.jpg",
+      "price": 189,
+      "salePrice": 169,
+      "subCategory": "Kurti"
+    },
+    {
+      "_id": "17",
+      "title": "Mechanical Keyboard",
+      "image": "https://i.ibb.co.com/7tVMQfrZ/662e5050dc235-square.jpg",
+      "price": 119,
+      "salePrice": 120,
+      "subCategory": "Kurti"
+    },
+    {
+      "_id": "18",
+      "title": "Portable Charger",
+      "image": "https://i.ibb.co.com/20JnmQMX/67b453a1afa33-square.jpg",
+      "price": 390,
+      "salePrice": 290,
+      "subCategory": "Kurti"
+    },
+    {
+      "_id": "19",
+      "title": "Digital Camera",
+      "image": "https://i.ibb.co.com/zV6pkyvb/663c942907a21-square.jpg",
+      "price": 4990,
+      "salePrice": 4400,
+      "subCategory": "Kurti"
+    },
+    {
+      "_id": "20",
+      "title": "Smartphone Stand",
+      "image": "https://i.ibb.co.com/gLsCzW1p/67c4ecd094777-square.jpg",
+      "price": 1920,
+      "salePrice": 1420,
+      "subCategory": "panjabi"
+    },
+    {
+      "_id": "21",
+      "title": "Smartphone Stand",
+      "image": "https://i.ibb.co.com/YTWpSkF7/67d18a63a8ec5-square.jpg",
+      "price": 1920,
+      "salePrice": 1420,
+      "subCategory": "panjabi"
+    },
+    {
+      "_id": "22",
+      "title": "Smartphone Stand",
+      "image": "https://i.ibb.co.com/gLJ7LrcR/67bdb94f2ecbf-square.jpg",
+      "price": 1920,
+      "salePrice": 1420,
+      "subCategory": "panjabi"
+    },
+    {
+      "_id": "23",
+      "title": "Smartphone Stand",
+      "image": "https://i.ibb.co.com/B1DJzGm/67bdb851a16f0-square.jpg",
+      "price": 1920,
+      "salePrice": 1420,
+      "subCategory": "panjabi"
+    },
+    {
+      "_id": "24",
+      "title": "Smartphone Stand",
+      "image": "https://i.ibb.co.com/r2NFYs2D/67dc641a9a059-square.jpg",
+      "price": 1920,
+      "salePrice": 1420,
+      "subCategory": "panjabi"
+    },
+    {
+      "_id": "25",
+      "title": "Smartphone Stand",
+      "image": "https://i.ibb.co.com/Nd3Dt7Gc/67e15309b9676-square.jpg",
+      "price": 1920,
+      "salePrice": 1420,
+      "subCategory": "panjabi"
+    },
+    {
+      "_id": "26",
+      "title": "Smartphone Stand",
+      "image": "https://i.ibb.co.com/qM532cYz/67dba9545f548-square.jpg",
+      "price": 1920,
+      "salePrice": 1420,
+      "subCategory": "panjabi"
+    },
+    {
+      "_id": "27",
+      "title": "Smartphone Stand",
+      "image": "https://i.ibb.co.com/3YrS3GDt/67c42f27c9642-square.jpg",
+      "price": 1920,
+      "salePrice": 1420,
+      "subCategory": "panjabi"
+    },
+    {
+      "_id": "28",
+      "title": "Smartphone Stand",
+      "image": "https://i.ibb.co.com/RpQJZfLV/67bdb91d19e28-square.jpg",
+      "price": 1920,
+      "salePrice": 1420,
+      "subCategory": "panjabi"
+    },
+
+    {
+      "_id": "29",
+      "title": "Smartphone Stand",
+      "image": "https://i.ibb.co.com/zh244p1S/67cbc783cf923-square.jpg",
+      "price": 1920,
+      "salePrice": 1420,
+      "subCategory": "tshirt"
+    },
+
+    {
+      "_id": "30",
+      "title": "Smartphone Stand",
+      "image": "https://i.ibb.co.com/XZW3LSDC/6388b06059dfd-square.png",
+      "price": 1920,
+      "salePrice": 1420,
+      "subCategory": "tshirt"
+    },
+
+    {
+      "_id": "31",
+      "title": "Smartphone Stand",
+      "image": "https://i.ibb.co.com/spqykg3S/64720fe2166a2-square.jpg",
+      "price": 1920,
+      "salePrice": 1420,
+      "subCategory": "tshirt"
+    },
+
+    {
+      "_id": "32",
+      "title": "Smartphone Stand",
+      "image": "https://i.ibb.co.com/Gv68YBcp/650c5a9a158f8-square.jpg",
+      "price": 1920,
+      "salePrice": 1420,
+      "subCategory": "tshirt"
+    },
+
+    {
+      "_id": "33",
+      "title": "Smartphone Stand",
+      "image": "https://i.ibb.co.com/V6LLDtN/650c2b9565179-square.jpg",
+      "price": 1920,
+      "salePrice": 1420,
+      "subCategory": "tshirt"
+    },
+
+    {
+      "_id": "34",
+      "title": "Smartphone Stand",
+      "image": "https://i.ibb.co.com/VcjsNvWW/67de98d6dea04-square.jpg",
+      "price": 1920,
+      "salePrice": 1420,
+      "subCategory": "tshirt"
+    },
+
+    {
+      "_id": "35",
+      "title": "Smartphone Stand",
+      "image": "https://i.ibb.co.com/qFFb0fzB/674ee159a3d4c-square.jpg",
+      "price": 1920,
+      "salePrice": 1420,
+      "subCategory": "tshirt"
+    },
+
+    {
+      "_id": "36",
+      "title": "Smartphone Stand",
+      "image": "https://i.ibb.co.com/bjkCxznP/64720fc96b9f4-square.jpg",
+      "price": 1920,
+      "salePrice": 1420,
+      "subCategory": "tshirt"
+    },
+
+    {
+      "_id": "37",
+      "title": "Smartphone Stand",
+      "image": "https://i.ibb.co.com/Xf8dg666/67de98d6e1881-square.jpg",
+      "price": 1920,
+      "salePrice": 1420,
+      "subCategory": "tshirt"
+    }
+  ]
+  
